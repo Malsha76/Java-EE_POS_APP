@@ -10,14 +10,14 @@ import java.io.IOException;
 import java.sql.*;
 
 @WebServlet(urlPatterns = {"/pages/item"})
-public class ItemServlet extends HttpServlet {
+public class ItemServletAPI extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/company", "root", "root123");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/company", "root", "1234");
             PreparedStatement pstm = connection.prepareStatement("select * from item");
             ResultSet rst = pstm.executeQuery();
             resp.addHeader("Content-Type","application/json");
@@ -190,7 +190,6 @@ public class ItemServlet extends HttpServlet {
         }
 
     }
-
     @Override
     protected void doOptions(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.addHeader("Access-Control-Allow-Origin", "*");

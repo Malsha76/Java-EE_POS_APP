@@ -1,6 +1,5 @@
 package lk.ijse.pos.dto;
 
-import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;

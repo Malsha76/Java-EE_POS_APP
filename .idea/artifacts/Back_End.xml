@@ -6,11 +6,12 @@
         <element id="directory" name="classes">
           <element id="module-output" name="Back_End" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Java EE 6-Java EE 6" />
+          <element id="library" level="project" name="javax.json-1.1.4" />
+        </element>
       </element>
       <element id="javaee-facet-resources" facet="Back_End/web/Web" />
-      <element id="library" level="project" name="Java EE 6-Java EE 6" />
-      <element id="library" level="project" name="javax.json-1.1.4" />
-      <element id="library" level="project" name="mysql-connector-java-8.0.21" />
     </root>
   </artifact>
 </component>

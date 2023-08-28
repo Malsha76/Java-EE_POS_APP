@@ -24,7 +24,7 @@
         <li class="list-group-item bg-white" id="lnkCustomer"><a href="customer.html">Customer</a></li>
         <li class="list-group-item bg-danger text-white" id="lnkItem"><a class="text-white" href="item.html">Item</a>
         </li>
-        <li class="list-group-item bg-white" id="lnkOrders"><a href="purchase-order.html">Orders</a></li>
+        <li class="list-group-item bg-white" id="lnkOrders"><a href="purchaseOrder.html">Orders</a></li>
     </ul>
 </header>
 
@@ -110,9 +110,7 @@
 
                     let row = `<tr><td>${item.code}</td><td>${item.description}</td><td>${item.qtyOnHand}</td><td>${item.unitPrice}</td></tr>`;
                     $("#tblItem").append(row);
-
                 }
-
                 bindRowClickOnAction();
                 clearRow("", "", "");
             },
@@ -120,19 +118,15 @@
                 console.log(error)
             }
         });
-
-
     }
 
-    // <!--    Load All Items  -->
+    /*  Load All Items */
 
     $("#btnGetAllItems").click(function () {
         getAll();
     });
 
-
-
-    // <!--    Save item  -->
+    /*   Save item */
     $("#btnItem").click(function () {
         let formData = $("#itemForm").serialize();
         console.log(formData);
@@ -153,10 +147,9 @@
                 alert(error.responseJSON.message);
             }
         });
-
     });
 
-    <!--    Update Customer  -->
+ /* Update Cus*/
 
     $("#btnItemUpdate").click(function () {
 
@@ -185,10 +178,9 @@
                 );
             }
         });
-
     });
 
-    <!--    Delete Customer -->
+  /*  Delete cus*/
 
     $("#btnItemDelete").click(function () {
         let code = $("#itemCode").val();
@@ -201,13 +193,10 @@
                     res.message
                 );
             },
-
         });
-
     });
 
-
-    <!--    Clear Fields -->
+    /*  clear fields*/
 
     $("#btn-clear").click(function () {
         clearRow("","","");
@@ -231,7 +220,6 @@
 
     }
 
-
     /*<!--    Clear Rows -->*/
     function clearRow(code,description,qtyOnHand,price) {
         $("#itemCode").val(code);
@@ -239,8 +227,6 @@
         $("#itemQty").val(qtyOnHand);
         $("#itemPrice").val(price);
     }
-
-
 
 </script>
 </body>
